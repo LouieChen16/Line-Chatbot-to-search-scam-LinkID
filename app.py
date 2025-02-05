@@ -13,8 +13,8 @@ import sqlite3
 
 app = Flask(__name__)
 
-configuration = Configuration(access_token='AvD/A7ujeUf4cuqk0SxzRsuxCP6gZBlLMCiTytV93QeEHy5oI5+5jC+V4Fv/HUBZ4tUsT5c7P7NpwSkefhDkXWFpouVtvZBM4BN+jz7yIoK6w8vJNBPxUhVUBr2Mi+5zOxeMV6CdKIRlEXjRphI6tAdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('9e76186debf867c540a0ad297893824b')
+configuration = Configuration(access_token='XXX')
+handler = WebhookHandler('XXX')
 
 # Get message from Line
 @app.route("/callback", methods=['POST'])
@@ -66,7 +66,7 @@ def handle_message(event):
     }
     headers = {
         "Content-Type": "application/json",
-        "Authorization": "Bearer AvD/A7ujeUf4cuqk0SxzRsuxCP6gZBlLMCiTytV93QeEHy5oI5+5jC+V4Fv/HUBZ4tUsT5c7P7NpwSkefhDkXWFpouVtvZBM4BN+jz7yIoK6w8vJNBPxUhVUBr2Mi+5zOxeMV6CdKIRlEXjRphI6tAdB04t89/1O/w1cDnyilFU="
+        "Authorization": "Bearer XXX"
     }
 
     response = requests.post(url, headers = headers, json = data)
